@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Tour Auvo</title>
+<meta name="description" content="Veja um dia real de uma empresa de serviços no Auvo: do chamado no WhatsApp à cobrança, passando por agenda, OS digital com assinatura, financeiro, PMOC e relatórios.">
+<meta name="theme-color" content="#07040f">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Tour Auvo · Do chamado à cobrança, num só sistema">
+<meta property="og:description" content="Tour interativo de 3 minutos: o cliente chama no WhatsApp, o técnico chega, o cliente assina na tela e a cobrança sai da própria OS.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%237c3aed'/%3E%3Cstop offset='1' stop-color='%23c084fc'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Crect x='16' y='20' width='32' height='23' rx='10' fill='%23fff'/%3E%3C/svg%3E">
+<script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)}</script>
+<script defer src="/_vercel/insights/script.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="app.css">
+<link rel="stylesheet" href="tour.css">
+</head>
+<body class="is-hero preload">
+<div class="aurora" aria-hidden="true"></div>
+<div id="app">
+  <header class="top">
+    <a class="brand" href="./" id="brandHome" aria-label="Voltar ao início do tour"><span class="mark" aria-hidden="true"></span><b>auvo</b><i>Tour</i></a>
+    <div class="seg" role="group" aria-label="Como você quer ver o Auvo">
+      <span class="thumb" aria-hidden="true"></span>
+      <button id="mGuided" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg>Tour guiado</button>
+      <button id="mExplore" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M15.8 8.2l-2.1 5.5-5.5 2.1 2.1-5.5z" fill="currentColor"/></svg>Explorar</button>
+    </div>
+    <div class="hright"><span class="fict">Dados fictícios</span><a class="cta" id="hCta" href="https://www.auvo.com/demonstracao-gratis" target="_blank" rel="noopener">Agendar apresentação</a></div>
+  </header>
+  <main class="stage-wrap">
+    <div id="stage">
+      <div id="win"></div>
+      <div id="spot" aria-hidden="true"></div>
+      <div id="hero"></div>
+      <div id="nt" aria-live="polite"></div>
+      <div id="lt" aria-live="polite"></div>
+      <div id="card" aria-live="polite"></div>
+      <div id="quiz" role="dialog" aria-modal="true" aria-label="Personalize seu tour"></div>
+      <div id="end" role="dialog" aria-label="Resumo do tour"></div>
+    </div>
+  </main>
+  <footer class="bot off" id="bot"></footer>
+</div>
+<script src="data.js"></script>
+<script src="engine.js"></script>
+<script src="app.js"></script>
+<script src="hub.js"></script>
+<script src="experience.js"></script>
+<script src="narration.js"></script>
+<script src="tour.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
