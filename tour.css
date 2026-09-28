@@ -450,8 +450,8 @@ body.mob .gcap b{display:block;font:600 16px/1.35 var(--font);color:var(--t1)}
 body.mob .gcap p{margin:3px 0 0;font:400 14px/1.4 var(--font);color:var(--t2)}
 body.mob .st span,body.mob .glab .rem{display:none}
 body.mob .take{grid-column:1/-1;justify-content:center}
-body.mob .bx{grid-template-columns:1fr auto;grid-template-areas:"cur cur" "hud acts";gap:10px;padding:12px}
-body.mob .cur{grid-area:cur}body.mob .hud{grid-area:hud}body.mob .acts{grid-area:acts}
+body.mob .bx{grid-template-columns:1fr;grid-template-areas:"cur" "hud" "acts";gap:8px;padding:12px}
+body.mob .cur{grid-area:cur}body.mob .hud{grid-area:hud;justify-self:start}body.mob .acts{grid-area:acts;justify-self:end}
 body.mob .hud .xpb,body.mob .hud .lv{display:none}
 body.mob .pop{right:10px;width:calc(100vw - 20px)}
 @media (max-width:1100px){.fict{display:none}}

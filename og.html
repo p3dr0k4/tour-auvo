@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>OG</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink-0:#07040f;
+    --t1:#f7f5ff; --t2:rgba(236,232,255,.82);
+    --font:"Poppins",system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{width:1200px;height:630px;overflow:hidden;background:var(--ink-0);font-family:var(--font)}
+  .aurora{position:absolute;inset:-25%;z-index:0;
+    background:
+      radial-gradient(34% 45% at 20% 20%,rgba(124,58,237,.55),transparent 70%),
+      radial-gradient(32% 40% at 82% 10%,rgba(217,70,239,.28),transparent 72%),
+      radial-gradient(44% 50% at 60% 92%,rgba(79,70,229,.34),transparent 72%),
+      radial-gradient(60% 60% at 50% 50%,rgba(20,10,44,.9),transparent 100%);
+  }
+  .wrap{position:relative;z-index:1;width:1200px;height:630px;display:flex;flex-direction:column;justify-content:center;padding:0 90px}
+  .brand{display:flex;align-items:center;gap:14px;position:absolute;top:56px;left:90px}
+  .mark{width:44px;height:44px;border-radius:12px;background:linear-gradient(135deg,#7c3aed,#c084fc);display:flex;align-items:center;justify-content:center}
+  .mark svg{width:24px;height:24px}
+  .brand b{font-size:26px;font-weight:800;color:var(--t1);letter-spacing:-.02em}
+  .brand i{font-style:normal;font-size:16px;font-weight:600;color:rgba(236,232,255,.55);margin-left:2px;padding:4px 10px;border:1px solid rgba(255,255,255,.18);border-radius:999px}
+  .kicker{display:flex;align-items:center;gap:10px;font-size:19px;font-weight:600;color:#b8a4ff;margin-bottom:22px}
+  .dot{width:9px;height:9px;border-radius:50%;background:#4ade80;box-shadow:0 0 0 4px rgba(74,222,128,.18)}
+  h1{font-size:70px;line-height:1.08;font-weight:800;color:var(--t1);letter-spacing:-.02em;max-width:920px}
+  h1 span{background:linear-gradient(92deg,#c4b5fd 0%,#e9d5ff 40%,#f0abfc 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+  p{margin-top:26px;font-size:26px;line-height:1.5;color:var(--t2);max-width:780px;font-weight:500}
+  .foot{position:absolute;bottom:56px;left:90px;right:90px;display:flex;align-items:center;justify-content:space-between}
+  .stats{display:flex;gap:48px}
+  .stat b{display:block;font-size:28px;font-weight:800;color:var(--t1)}
+  .stat span{font-size:15px;color:rgba(236,232,255,.55);font-weight:600}
+  .cta{font-size:18px;font-weight:700;color:#07040f;background:linear-gradient(135deg,#c4b5fd,#f0abfc);padding:16px 30px;border-radius:999px}
+</style>
+</head>
+<body>
+  <div class="aurora"></div>
+  <div class="wrap">
+    <div class="brand">
+      <div class="mark"><svg viewBox="0 0 64 64" fill="none"><rect x="12" y="18" width="40" height="26" rx="11" fill="#fff"/></svg></div>
+      <b>auvo</b><i>Tour</i>
+    </div>
+    <div class="kicker"><span class="dot"></span>Tour interativo · 3 minutos</div>
+    <h1>Do chamado à cobrança.<br><span>Num só sistema.</span></h1>
+    <p>Veja um dia real de uma empresa de serviços no Auvo: WhatsApp, agenda, OS digital com assinatura, financeiro e relatórios.</p>
+    <div class="foot">
+      <div class="stats">
+        <div class="stat"><b>+6 mil</b><span>empresas clientes</span></div>
+        <div class="stat"><b>+80 mil</b><span>usuários ativos</span></div>
+        <div class="stat"><b>4,7</b><span>nota no Google</span></div>
+      </div>
+      <div class="cta">tour-auvo.vercel.app</div>
+    </div>
+  </div>
+</body>
+</html>
