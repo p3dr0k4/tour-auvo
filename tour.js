@@ -77,7 +77,7 @@ const rowCell = (i, sel) => { const r = $$('.tbl tbody tr', win)[i]; return r ? 
 
 // est = segundos de cada capítulo sem o cartão (medido no navegador); estN = o mesmo com narração; chain = elo da história no cartão
 const CHAPS = [
-  { id: 'chamado', l: 'Chamado', chain: 0, nar: 'c1-0', est: 16, estN: 22, time: 'Quinta · 16:10', title: 'O cliente chama.', sub: 'No WhatsApp, como ele prefere. E nada se perde.',
+  { id: 'chamado', l: 'Chamado', chain: 0, nar: 'c1-0', est: 16, estN: 14, time: 'Quinta · 16:10', title: 'O cliente chama.', sub: 'No WhatsApp, como ele prefere. E nada se perde.',
     setup: () => { story('open'); window.hubStoryReset(); go('hubapp', { conv: 0 }); camSet('in'); },
     run: async T => {
       T.note({ k: 'hub', title: 'Marcos Tavares · Condomínio Bela Vista', body: 'O ar do bloco B parou de gelar. Conseguem vir amanhã cedo?', time: 'qui 16:10' });
@@ -90,7 +90,7 @@ const CHAPS = [
       T.say('Um clique e vira chamado.', 'O ticket nasce no AuvoDesk sem sair da conversa. Nada fica esquecido no celular de ninguém.', 'c1-3');
       await T.wait(4200);
     } },
-  { id: 'ticket', l: 'Ticket', chain: 1, nar: 'c2-0', est: 15, estN: 16, time: 'Quinta · 16:12', title: 'Vira um chamado.', sub: 'Com dono, prioridade e prazo. Tudo registrado.',
+  { id: 'ticket', l: 'Ticket', chain: 1, nar: 'c2-0', est: 15, estN: 10, time: 'Quinta · 16:12', title: 'Vira um chamado.', sub: 'Com dono, prioridade e prazo. Tudo registrado.',
     setup: () => { story('open'); go('dticket'); camSet('in'); },
     run: async T => {
       T.note({ k: 'desk', title: 'Chamado #0250 aberto', body: 'Prioridade alta · prazo do contrato: 4 horas', time: 'qui 16:12' });
@@ -102,7 +102,7 @@ const CHAPS = [
       T.say('O chamado vira ordem de serviço.', 'A tarefa nasce ligada ao ticket, ao cliente e ao equipamento, direto na agenda do técnico.', 'c2-3');
       await T.hover('[data-act="os-from-ticket"]', { ms: 800 }); await T.wait(3600);
     } },
-  { id: 'agenda', l: 'Agenda', chain: 2, nar: 'c3-0', est: 20, estN: 25, time: 'Quinta · 16:45', title: 'Entra na agenda.', sub: 'O técnico certo, no horário certo.',
+  { id: 'agenda', l: 'Agenda', chain: 2, nar: 'c3-0', est: 20, estN: 15, time: 'Quinta · 16:45', title: 'Entra na agenda.', sub: 'O técnico certo, no horário certo.',
     setup: () => { story('open'); go('agenda'); camSet('in'); },
     run: async T => {
       T.say('A agenda da equipe inteira.', 'Cada cor é um status: vermelho em aberto, azul a caminho, verde em execução, cinza finalizada.', 'c3-1');
@@ -117,7 +117,7 @@ const CHAPS = [
       T.say('E o cliente é avisado sozinho.', 'Agendamento, técnico a caminho e pesquisa de satisfação, sem ninguém digitar.', 'c3-4');
       await T.wait(3400);
     } },
-  { id: 'campo', l: 'Em campo', chain: 3, nar: 'c4-0', est: 20, estN: 26, time: 'Sexta · 08:12', title: 'O técnico sai.', sub: 'O cliente é avisado. Você acompanha no mapa.',
+  { id: 'campo', l: 'Em campo', chain: 3, nar: 'c4-0', est: 20, estN: 15, time: 'Sexta · 08:12', title: 'O técnico sai.', sub: 'O cliente é avisado. Você acompanha no mapa.',
     setup: () => { story('route'); go('mapa'); camSet('in'); },
     run: async T => {
       T.note({ k: 'auvo', title: 'Carlos está a caminho', body: 'Chegada ao Bela Vista às 8h30 · cliente avisado', time: 'sex 08:12' });
@@ -134,7 +134,7 @@ const CHAPS = [
       T.say('Check-in feito. Fica verde.', 'A 38 metros do cliente, com GPS de alta precisão.', 'c4-4');
       await T.wait(3200);
     } },
-  { id: 'assinatura', l: 'Assinatura', chain: 4, nar: 'c5-0', est: 25, estN: 31, time: 'Sexta · 09:31', title: 'Serviço feito. Cliente assina.', sub: 'Checklist, fotos, GPS e assinatura. Sem papel.',
+  { id: 'assinatura', l: 'Assinatura', chain: 4, nar: 'c5-0', est: 25, estN: 14, time: 'Sexta · 09:31', title: 'Serviço feito. Cliente assina.', sub: 'Checklist, fotos, GPS e assinatura. Sem papel.',
     setup: () => { story('pend'); go('agenda'); S.modal = { type: 'os', ev: MAIN_OS, tab: 'mon' }; renderModal(); camSet('in'); },
     run: async T => {
       T.say('Tudo registrado em campo.', 'Check-in e check-out com GPS, checklist e fotos. Você sabe o que foi feito, e quando.', 'c5-1');
@@ -153,7 +153,7 @@ const CHAPS = [
       T.say('Assinado. Sem papel.', 'A OS assinada fica guardada e pode ir para o cliente por e-mail.', 'c5-4');
       await T.wait(3600);
     } },
-  { id: 'cobranca', l: 'Cobrança', chain: 5, nar: 'c6-0', est: 19, estN: 20, time: 'Sexta · 09:32', title: 'A cobrança sai da OS.', sub: 'Sem digitar de novo. E o pagamento dá baixa sozinho.',
+  { id: 'cobranca', l: 'Cobrança', chain: 5, nar: 'c6-0', est: 19, estN: 12, time: 'Sexta · 09:32', title: 'A cobrança sai da OS.', sub: 'Sem digitar de novo. E o pagamento dá baixa sozinho.',
     setup: () => { story('pend', false); go('faturas', { hl: true }); camSet('in'); },
     run: async T => {
       T.say('A fatura nasce da OS.', '“Serviços prestados à Tarefa #80412”: os valores do relatório, sem digitar de novo.', 'c6-1');
@@ -169,7 +169,7 @@ const CHAPS = [
       T.say('E o caixa sempre à vista.', 'O fluxo de caixa projeta os próximos 15 dias com o que já está lançado.', 'c6-3');
       await T.wait(4200);
     } },
-  { id: 'pmoc', l: 'PMOC', only: 'clima', chain: 6, nar: 'c7-0', est: 9, estN: 11, time: 'Sempre em dia', title: 'O PMOC se cuida.', sub: 'Vencimentos à vista, antes da fiscalização.',
+  { id: 'pmoc', l: 'PMOC', only: 'clima', chain: 6, nar: 'c7-0', est: 9, estN: 7, time: 'Sempre em dia', title: 'O PMOC se cuida.', sub: 'Vencimentos à vista, antes da fiscalização.',
     setup: () => { story('done', true); go('pmoc', { hl: true }); camSet('in'); },
     run: async T => {
       T.say('PMOC em dia, sem susto.', 'Verde em dia, amarelo perto de vencer, vermelho vencido.', 'c7-1');
@@ -177,7 +177,7 @@ const CHAPS = [
       T.say('Você age antes de vencer.', 'Equipamentos, responsável técnico e vigência de cada plano, organizados por cliente.', 'c7-2');
       await T.hover(rowCell(3, 'td:nth-child(3)'), { ms: 800 }); await T.wait(3400);
     } },
-  { id: 'resultados', l: 'Resultados', chain: 6, nar: 'c8-0', est: 15, estN: 17, time: 'Sexta · 18:00', title: 'O dia em números.', sub: 'Produtividade, atrasos e faturamento. Em um olhar.',
+  { id: 'resultados', l: 'Resultados', chain: 6, nar: 'c8-0', est: 15, estN: 9, time: 'Sexta · 18:00', title: 'O dia em números.', sub: 'Produtividade, atrasos e faturamento. Em um olhar.',
     setup: () => { story('done', true); go('dashboard'); camSet('in'); },
     run: async T => {
       T.say('Quem produziu, quem atrasou.', 'Produtividade, atraso médio e tempo de atendimento de cada técnico.', 'c8-1');

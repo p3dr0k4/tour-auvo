@@ -222,7 +222,7 @@ function stageToast(msg) {
 }
 async function shareTour() {
   const url = location.origin + location.pathname;
-  const text = 'Veja o Auvo funcionando neste tour interativo de 3 minutos: ' + url;
+  const text = 'Veja o Auvo funcionando neste tour interativo de 2 minutos: ' + url;
   if (MOB && navigator.share) { try { await navigator.share({ title: 'Tour Auvo', text, url }); track('share', { via: 'nativo' }); return; } catch (e) { /* cancelado */ } }
   try { await navigator.clipboard.writeText(url); stageToast('Link copiado. Envie para quem decide com você.'); track('share', { via: 'copiar' }); }
   catch (e) { stageToast('Copie o link: ' + url); }

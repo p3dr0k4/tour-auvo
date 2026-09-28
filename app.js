@@ -625,7 +625,7 @@ function updateBottom() {
 // Abertura: promessa em uma frase, um convite principal e prova social publicada em auvo.com
 function heroHTML() {
   $('#hero').innerHTML = `<div class="hcopy">
-    <div class="heb"><i></i>Tour interativo · 3 minutos</div>
+    <div class="heb"><i></i>Tour interativo · 2 minutos</div>
     <h1><span>Do chamado</span><span>à cobrança.</span><span class="g">Num só sistema.</span></h1>
     <p>Acompanhe um dia real de uma empresa de serviços: o cliente chama no WhatsApp, o técnico é despachado, o cliente assina na tela e a cobrança sai da própria OS.</p>
     <div class="hcta"><button class="pbtn" id="hGuided"><span class="pi">${IC.play}</span>Começar o tour</button><button class="lnkbtn" id="hExplore">Explorar por conta própria <span class="ch">›</span></button></div>
